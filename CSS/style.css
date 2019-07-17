@@ -202,3 +202,50 @@ h6 {
 .nav__link.active {
     color: #fce38a;
 }
+
+.section {
+    padding: 80px 0;
+}
+
+.section__header {
+    width: 100%;
+    max-width: 950px;
+    margin: 0 auto 40px;
+    text-align: center;
+}
+
+.section__subtitle {
+    font-size: 24px;
+    color: #333;
+    font-family: 'Kaushan Script', cursive;
+}
+
+.section__title {
+    font-size: 30px;
+    font-weight: 700;
+    color: #333;
+    text-transform: uppercase;
+}
+
+.section__title::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: #f38181;
+    margin: 30px auto;
+}
+
+.section__text {
+    font-size: 15px;
+    color: #999;
+}
+
+.about {
+    display: flex;
+    justify-content: space-between;
+}
+
+.about__item {
+    width: 30%;
+}
