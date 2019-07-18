@@ -38,6 +38,15 @@ h6 {
     margin: 0;
 }
 
+hr {
+    border: 0;
+    background-color: #e5e5e5;
+    display: block;
+    width: 100%;
+    height: 1px;
+    margin: 40px 0;
+}
+
 .header {
     width: 100%;
     position: absolute;
@@ -210,7 +219,7 @@ h6 {
 .section__header {
     width: 100%;
     max-width: 950px;
-    margin: 0 auto 40px;
+    margin: 0 auto 50px;
     text-align: center;
 }
 
@@ -244,11 +253,13 @@ h6 {
 .about {
     display: flex;
     justify-content: space-between;
+    margin-top: 80px;
 }
 
 .about__item {
     width: 380px;
     background-color: #95e1d3;
+    position: relative;
 }
 
 .about__img {
@@ -267,4 +278,86 @@ h6 {
 
 .about__item:hover .about__img {
     transform: translate3d(-10px, -10px, 0);
+}
+
+.about__text {
+    width: 100%;
+    color: white;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: 700;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    z-index: 2;
+    transform: translate3d(0, -50%, 0);
+    opacity: 0;
+    transition: opacity .2s linear;
+}
+
+.about__item:hover .about__text {
+    opacity: 1;
+}
+
+.statistics {
+    background-color: #95e1d3;
+}
+
+.stat {
+    display: flex;
+}
+
+.stat__item {
+    flex: 1 1 0;
+    border-left: 1px solid #b5eae0;
+    text-align: center;
+    color: #fff;
+    padding: 70px 25px;
+}
+
+.stat__item:last-child {
+    border-right: 1px solid #b5eae0;
+}
+
+.stat__count {
+    font-size: 72px;
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: 10px;
+}
+
+.stat__text {
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+.services {
+    display: flex;
+}
+
+.services__item {
+    flex: 1 1 0;
+    padding-left: 85px;
+    position: relative;
+    padding-right: 35px;
+}
+
+.services__icon {
+    position: absolute;
+    top: 0;
+    left: 28px;
+    z-index: 1;
+}
+
+.services__title {
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #333;
+    text-transform: uppercase;
+}
+
+.services__text {
+    font-size: 15px;
+    color: #999;
 }
