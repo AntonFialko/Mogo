@@ -457,3 +457,77 @@ hr {
 .accordion__item.active .accordion__header {
     border-bottom-color: #e5e5e5;
 }
+
+.section--gray {
+    background-color: #f8f8f8;
+}
+
+.reviews {
+    padding: 0 110px;
+    position: relative;
+}
+
+.reviews__item {
+    padding-left: 205px;
+    position: relative;
+}
+
+.reviews__photo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    border: 2px solid #95e1d3;
+}
+
+.reviews__text {
+    font-size: 24px;
+    color: #999;
+    font-weight: 300;
+    font-style: italic;
+    margin-bottom: 15px;
+}
+
+.reviews__author {
+    font-size: 24px;
+    color: #333;
+    font-family: 'Kaushan Script', cursive;
+}
+
+.reviews__author::before {
+    content: "";
+    display: inline-block;
+    height: 3px;
+    vertical-align: middle;
+    width: 60px;
+    margin-right: 10px;
+    background-color: #f38181;
+}
+
+.reviews__btn {
+    font-size: 0;
+    color: transparent;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+
+.reviews__btn::after {
+    content: "";
+    display: block;
+    width: 16px;
+    height: 16px;
+    border-top: 2px solid #cccccc;
+    border-left: 2px solid #cccccc;
+}
+
+.reviews__btn--prev {
+    left: 0;
+    transform: rotate(-45deg);
+}
+
+.reviews__btn--next {
+    right: 0;
+    transform: rotate(135deg);
+}
