@@ -14,8 +14,9 @@ body {
 
 .container {
     width: 100%;
-    max-width: 1200px;
+    max-width: 1230px;
     margin: 0 auto;
+    padding: 0 15px;
 }
 
 .intro {
@@ -253,17 +254,19 @@ hr {
 .card {
     display: flex;
     justify-content: space-between;
-    margin-top: 80px;
+    margin: 80px -15px 0;
+    flex-wrap: wrap;
 }
 
 .card__item {
-    width: 380px;
+    width: 33.33333%;
+    padding: 0 15px;
     position: relative;
 }
 
 .card__img {
     background: linear-gradient(to bottom, #f38181, #fce38a);
-    transition: transform .1s linear;
+    transition: transform .2s linear;
 }
 
 .card__item:hover .card__img img {
@@ -272,7 +275,9 @@ hr {
 
 .card__img img {
     display: block;
-    transition: opacity .2s linear;
+    max-width: 100%;
+    height: auto;
+    transition: opacity .1s linear;
 }
 
 .card__item:hover .card__img {
@@ -305,6 +310,7 @@ hr {
 
 .stat {
     display: flex;
+    flex-wrap: wrap;
 }
 
 .stat__item {
@@ -1011,4 +1017,93 @@ hr {
 
 .copyright span {
     color: #f38181;
+}
+
+@media(max-width:1230px) {
+    .intro__title {
+        font-size: 120px;
+    }
+    .intro__suptitle {
+        font-size: 52px;
+    }
+}
+
+@media(max-width:990px) {
+    .intro__title {
+        font-size: 32px;
+    }
+    .intro__suptitle {
+        font-size: 80px;
+    }
+    .stat {
+        justify-content: center;
+    }
+    .stat__item {
+        flex: none;
+        width: 33.33333%;
+        border: 0;
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+    .stat__item:last-child {
+        border-right: 0;
+    }
+}
+
+@media(max-width:770px) {
+    .nav {
+        display: none;
+    }
+    .slider__text {
+        display: none;
+    }
+    .slider__item.active:before {
+        width: 50%;
+    }
+    .section {
+        padding: 40px 0;
+    }
+    .card__item {
+        width: 100%;
+        max-width: 410px;
+        margin-bottom: 30px;
+    }
+    .card {
+        margin-top: 50px;
+        justify-content: center;
+    }
+    .card__item:last-child {
+        margin-bottom: 0;
+    }
+}
+
+@media(max-width:575px) {
+    .intro__title {
+        font-size: 22px;
+    }
+    .intro__suptitle {
+        font-size: 40px;
+    }
+    .section__title {
+        font-size: 24px;
+    }
+    .section__subtitle {
+        font-size: 20px;
+    }
+    .section__title::after {
+        margin: 20px auto;
+    }
+    .section__header {
+        margin-bottom: 50px;
+    }
+    .stat__item {
+        width: 100%;
+        border-bottom: 1px solid #b5eae0;
+    }
+    .stat__item:last-child {
+        border-bottom: 0;
+    }
+    .stat__count {
+        font-size: 52px;
+    }
 }
